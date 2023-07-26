@@ -15,5 +15,11 @@ Example: <br />
 
 Note: <br />
 1. Users should put the shell scripts and raw_data folder in the same directory. Otherwise, please modify the path where the fastq file stored in the shell script. <br />
-2. The method is still under further optimization and development, please contact us if you have any good suggestions and questions.<br />
+2. Prepare the information of the HLA type configure file, such as *HLA-Type.config*. <br />
+```
+A
+B
+C
+```
+3. The method is still under further optimization and development, please contact us if you have any good suggestions and questions.<br />
 ***Contact and E-mail: langjidong@hotmail.com***
