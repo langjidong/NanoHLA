@@ -15,7 +15,7 @@ Example: <br />
 
 Note: <br />
 1. Users should put the shell scripts and raw_data folder in the same directory. Otherwise, please modify the path where the fastq file stored in the shell script. <br />
-2. Prepare the information of the HLA type configure file, such as *HLA-Type.config*. <br />
+2. Prepare the information of the HLA genes configure file, such as *HLA-Type.config*. <br />
 ```
 A
 B
