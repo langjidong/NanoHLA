@@ -29,7 +29,7 @@ echo "Preprocessing Finished----`date`"
 echo "Coverage Analysis Start----`date`"
 mkdir Coverage
 minimap2 -a -x map-ont $4/database/hla.clean.fasta ./clean_data/$1.clean.fq -t 4 > ./Coverage/$1.sam
-/mnt/nas/bioinfo/langjidong/PERL/resequencing/bin1/reseq/CNV/soap.coverage -cvg -p 4 -sam -i ./Coverage/$1.sam -refsingle $4/database/hla.clean.fasta -o ./Coverage/$1.coverage.txt
+$4/bin/soap.coverage -cvg -p 4 -sam -i ./Coverage/$1.sam -refsingle $4/database/hla.clean.fasta -o ./Coverage/$1.coverage.txt
 rm -rf ./Coverage/$1.sam
 perl $4/bin/Coverage_Filter.pl ./Coverage/$1.coverage.txt ./Coverage/$1.filter.txt
 less $2|while read b;do less ./Coverage/$1.filter.txt|grep "_${b}_"|awk '{printf($1"\t"$2"\t""%.2f\n",$3)}'|sort -rnk3 > ./Coverage/HLA-${b}.covfilter.txt;done
